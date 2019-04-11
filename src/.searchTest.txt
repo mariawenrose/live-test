@@ -1,0 +1,24 @@
+class search extends React.Componenet {
+  constructor(props)
+  super(props);
+
+  this.state = {
+    search: 
+  };
+}
+
+
+
+propTypes: {
+  inputSearch: React.propTypes.string,
+  searchResult: React.propTypes.bool
+}
+
+filterSearchResults: function() {
+  if(this.props.behanceData.user.Id) === 
+  }
+}
+
+return (
+  <divs ... /> 
+)
