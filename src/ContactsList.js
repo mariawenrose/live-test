@@ -15,25 +15,27 @@ class ContactsList extends React.Component {
   }
 
   render () {
-    let filteredContacts = this.props.contacts.filter(
-      (contact) => {
-        return contacts.name.indexOf(this.state.search) !== -1;
+    let filteredContacts = this.props.myContactsFromApp.filter(
+      (myContactsFromApp) => {
+        return myContactsFromApp.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
     );
-    console.log(this.props.ContactsFromApp)
+    console.log(filteredContacts)
 
     var contacts = {contacts}
     return (
     <div>
+
+      <input type = "text" placeholder = "search" value = {this.state.search}
+        onChange = {this.updateSearch.bind(this)}
+      />
 
       <ul>
         {filteredContacts.map((contact)=> {
           return <Contact contact = {contact} />
         })}
       </ul>
-      <input type = "text" placeholder = "search" value = {this.state.search}
-       onChange = {this.updateSearch.bind(this)}
-     />
+
    
     </div>
     )
